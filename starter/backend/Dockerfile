@@ -17,7 +17,7 @@ RUN apk update && \
 RUN mkdir -p /var/www/app && mkdir /app
 
 COPY Pipfile* /app
-RUN cd /app && pipenv install --system --deploy
+RUN cd /app && pip install pipenv && pipenv install --system --skip-lock
 
 COPY . /app
 
