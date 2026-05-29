@@ -81,3 +81,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build --tag mp-backend:latest .
+
+      - name: Show service URLs
+        run: kubectl get svc -A
