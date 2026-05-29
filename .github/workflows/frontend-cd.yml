@@ -146,3 +146,6 @@ jobs:
         run: |
           kustomize edit set image frontend=$ECR_REGISTRY/frontend:$IMAGE_TAG
           kustomize build | kubectl apply -f -
+      
+      - name: Show service URLs
+        run: kubectl get svc -A
